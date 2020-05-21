@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="showPopup();">Unesi vrijednost</button>
+
+    <script>
+
+        var broj1;
+        var operacija;
+        var broj2;
+        var rezultat;
+    
+        
+        function showPopup() {
+            if(broj1 == null) {
+                var vrijednost = prompt("Unesi broj 1", "0");
+                broj1 = Number(vrijednost);
+            } else if(operacija == null) {
+                var vrijednost = prompt("Unesi operaciju (+, -, *, /)", "+");
+                operacija = vrijednost;
+            } else if(broj2 == null) {
+                var vrijednost = prompt("Unesi broj 2", "0");
+                broj2 = Number(vrijednost);
+            
+                if(operacija == "+"){
+                    rezultat = broj1 + broj2;
+                } else if (operacija == "-") {
+                    rezultat = broj1 - broj2;
+                } else if (operacija == "*") {
+                    rezultat = broj1 * broj2;
+                } else {
+                    rezultat = broj1 / broj2;
+                }
+
+                alert("rezultat je: "+rezultat);
+
+                broj1 = null;
+                operacija = null;
+                broj2 = null;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
